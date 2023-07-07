@@ -148,7 +148,7 @@ function Cart(props) {
         }
         setTimeout(async()=>{ 
             if(contactInfo.user_name!==''){
-                const orderUrl = "http://localhost:3001/razorpay/order";
+                const orderUrl = "https://angry-eel-veil.cyclic.app/razorpay/order";
                 const obj = {
                     total : parseFloat(Number(sumOfProducts)+Number(99)),
                 }
@@ -164,7 +164,7 @@ function Cart(props) {
                     handler : async(response)=>{
                         try{
                             const paymentId = response.razorpay_payment_id;
-                            const url = `http://localhost:3001/razorpay/capture/${paymentId}`
+                            const url = `https://angry-eel-veil.cyclic.app/razorpay/capture/${paymentId}`
                             const captureResponse = await axios.post(url, {obj})
                             const successObj = JSON.parse(captureResponse.data)
                             const captured = successObj.captured;
@@ -178,7 +178,7 @@ function Cart(props) {
                         }
                     },
                     prefill: {
-                        name: "Vairamuthu",
+                        name: "suparna7suppu",
                         email: currentUser && currentUser.email, 
                     },
                     theme: {

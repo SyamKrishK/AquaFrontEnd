@@ -1,1 +1,1 @@
-export const baseUrl = "http://localhost:3001/uploads/images/";
+export const baseUrl = "https://angry-eel-veil.cyclic.app/uploads/images/";

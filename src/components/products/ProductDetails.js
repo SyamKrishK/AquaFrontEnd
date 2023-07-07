@@ -538,7 +538,7 @@ function ProductDetails(props) {
                     <div className="row">
                       {location.state.data.details && productDetails}
                     </div>
-                    {currentUser&&currentUser.email==="vairam@gmail.com" && <div>
+                    {currentUser&&currentUser.email==="suparna7suppu@gmail.com" && <div>
                         <textarea
                           type="textarea"
                           rows='1' 

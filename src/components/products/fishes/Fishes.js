@@ -61,7 +61,7 @@ const RenderFish = ({fish,deleteProduct}) =>{
                                     <i class="fa fa-shopping-bag"></i>
                                 </IconButton>
                                 }</b>
-                            {currentUser && currentUser.email==="vairam@gmail.com" && <b style={{marginLeft:'4px'}}>{text && 
+                            {currentUser && currentUser.email==="suparna7suppu@gmail.com" && <b style={{marginLeft:'4px'}}>{text && 
                                 <IconButton
                                     variant="outlined"
                                     color="inherit"

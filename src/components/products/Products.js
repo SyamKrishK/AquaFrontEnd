@@ -380,7 +380,7 @@ export default function Products(props) {
                             </Form>
                             </Fade>
                         </div>
-                        {currentUser && currentUser.email==="vairam@gmail.com" && <div className="col-3 col-sm-3 p-3 pt-5 mt-4">
+                        {currentUser && currentUser.email==="suparna7suppu@gmail.com" && <div className="col-3 col-sm-3 p-3 pt-5 mt-4">
                             <Btn
                                 style={{float:'right'}}
                                 variant="outline-success"

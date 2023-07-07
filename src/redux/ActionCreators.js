@@ -7,7 +7,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
     console.log("values for Star rating ",email,id,category,author,rating,ratingCount,comment,date);
     if(category==="Fishes"){
        // dispatch(fishesLoading(true))
-        return axios.put(`http://localhost:3001/rating/fishes`,{
+        return axios.put(`https://angry-eel-veil.cyclic.app/rating/fishes`,{
             email,
             id,
             category,
@@ -22,7 +22,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
     }  
     if(category==="Fish-Foods") {
         //dispatch(foodsLoading(true))
-        return axios.put(`http://localhost:3001/rating/foods`,{
+        return axios.put(`https://angry-eel-veil.cyclic.app/rating/foods`,{
             email,
             id,
             category,
@@ -37,7 +37,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
     }
     if(category==="Substrates"){
        // dispatch(substratesLoading(true));
-        return axios.put(`http://localhost:3001/rating/substrates`,{
+        return axios.put(`https://angry-eel-veil.cyclic.app/rating/substrates`,{
             email,
             id,
             category,
@@ -52,7 +52,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
     }
     if(category==="Accessories"){
        // dispatch(filtersLoading(true));
-        return axios.put(`http://localhost:3001/rating/filters`,{
+        return axios.put(`https://angry-eel-veil.cyclic.app/rating/filters`,{
             email,
             id,
             category,
@@ -67,7 +67,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
     }
     if(category==="Plants"){
        // dispatch(plantsLoading(true));
-        return axios.put(`http://localhost:3001/rating/plants`,{
+        return axios.put(`https://angry-eel-veil.cyclic.app/rating/plants`,{
             email,
             id,
             category,
@@ -86,7 +86,7 @@ export const starRating = (email,id,category,author,rating,ratingCount,comment,d
 
 export const postFishContents = (id,title,content) => (dispatch) =>{
     dispatch(fishesLoading(true));
-    return axios.put('http://localhost:3001/fishes/details', {
+    return axios.put('https://angry-eel-veil.cyclic.app/fishes/details', {
         id:id,
         title:title,
         content:content
@@ -97,7 +97,7 @@ export const postFishContents = (id,title,content) => (dispatch) =>{
 }
 export const postPlantContents =  (id,title,content) => (dispatch) =>{
     dispatch(plantsLoading(true));
-    return axios.put('http://localhost:3001/plants/details', {
+    return axios.put('https://angry-eel-veil.cyclic.app/plants/details', {
         id:id,
         title:title,
         content:content
@@ -110,7 +110,7 @@ export const postPlantContents =  (id,title,content) => (dispatch) =>{
 export const postSubstrateContents = (id,title,content) => (dispatch) =>{
     dispatch(substratesLoading(true));
 
-    return axios.put('http://localhost:3001/substrate/details', {
+    return axios.put('https://angry-eel-veil.cyclic.app/substrate/details', {
         id:id,
         title:title,
         content:content
@@ -122,7 +122,7 @@ export const postSubstrateContents = (id,title,content) => (dispatch) =>{
 export const postFoodContents = (id,title,content) => (dispatch) =>{
     dispatch(foodsLoading(true));
 
-    return axios.put('http://localhost:3001/fishfoods/details', {
+    return axios.put('https://angry-eel-veil.cyclic.app/fishfoods/details', {
         id:id,
         title:title,
         content:content
@@ -134,7 +134,7 @@ export const postFoodContents = (id,title,content) => (dispatch) =>{
 export const postFilterContents = (id,title,content) => (dispatch) =>{
     dispatch(filtersLoading(true));
 
-    return axios.put('http://localhost:3001/filters/details', {
+    return axios.put('https://angry-eel-veil.cyclic.app/filters/details', {
         id:id,
         title:title,
         content:content
@@ -149,35 +149,35 @@ export const postFilterContents = (id,title,content) => (dispatch) =>{
 export const deleteProduct = (id,category) => (dispatch) =>{ 
     if(category==="Fishes"){
         dispatch(fishesLoading(true))
-        return axios.put(`http://localhost:3001/delete/fishes`,{id:id}) 
+        return axios.put(`https://angry-eel-veil.cyclic.app/delete/fishes`,{id:id}) 
         .then((response)=> response.data) 
         .then(response => dispatch(addFishes(response)))
         .catch((error)=>dispatch(fishesFailed(error)))
     }  
     if(category==="Fish-Foods") {
         dispatch(foodsLoading(true))
-        return axios.put(`http://localhost:3001/delete/fishfoods`,{id:id})
+        return axios.put(`https://angry-eel-veil.cyclic.app/delete/fishfoods`,{id:id})
         .then((response)=> response.data)
         .then(response => dispatch(addFoods(response)))
         .catch((error)=>dispatch(foodsFailed(error)))
     }
     if(category==="Substrates"){
         dispatch(substratesLoading(true));
-        return axios.put(`http://localhost:3001/delete/substrates`,{id:id})
+        return axios.put(`https://angry-eel-veil.cyclic.app/delete/substrates`,{id:id})
         .then((response)=> response.data)
         .then(response => dispatch(addSubstrates(response)))
         .catch((error)=>dispatch(substratesFailed(error)))
     }
     if(category==="Accessories"){
         dispatch(filtersLoading(true));
-        return axios.put(`http://localhost:3001/delete/filters`,{id:id})
+        return axios.put(`https://angry-eel-veil.cyclic.app/delete/filters`,{id:id})
         .then((response)=> response.data)
         .then(response => dispatch(addFilters(response)))
         .catch((error)=>dispatch(filtersFailed(error)))
     }
     if(category==="Plants"){
         dispatch(plantsLoading(true));
-        return axios.put(`http://localhost:3001/delete/plants`,{id:id})
+        return axios.put(`https://angry-eel-veil.cyclic.app/delete/plants`,{id:id})
         .then((response)=> response.data)
         .then(response => dispatch(addPlants(response)))
         .catch((error)=>dispatch(plantsFailed(error)))
@@ -193,7 +193,7 @@ export const postFishes = (image,name,price,category,stock) => (dispatch)=>{
     fd.append("category",category);
     fd.append("stock",stock); 
     console.log(image,name,price,category);
-    return axios.post('http://localhost:3001/fishes', fd)
+    return axios.post('https://angry-eel-veil.cyclic.app/fishes', fd)
     .then((response)=> response.data)
     .then(response => dispatch(addFishes(response)))
     .catch((error)=>dispatch(fishesFailed(error)))
@@ -209,7 +209,7 @@ export const postFishes = (image,name,price,category,stock) => (dispatch)=>{
 export const fetchRecents = () =>(dispatch)=>{
     dispatch(recentsLoading(true));
 
-    return axios.get('http://localhost:3001/categories') 
+    return axios.get('https://angry-eel-veil.cyclic.app/categories') 
         .then((response)=> response.data)
         .then(response => dispatch(addRecents(response)))
         .catch((error)=>dispatch(recentsFailed(error)))
@@ -233,7 +233,7 @@ export const addRecents = (recents) => ({
 export const fetchFishes = () =>(dispatch)=>{
     dispatch(fishesLoading(true));
 
-    return axios.get('http://localhost:3001/fishes') 
+    return axios.get('https://angry-eel-veil.cyclic.app/fishes') 
         .then((response)=> response.data)
         .then(response => dispatch(addFishes(response)))
         .catch((error)=>dispatch(fishesFailed(error)))
@@ -267,7 +267,7 @@ export const postPlants = (image,name,price,category,stock) => (dispatch)=>{
     fd.append("category",category); 
     fd.append("stock",stock);
     console.log(image,name,price,category);
-    return axios.post('http://localhost:3001/plants', fd)
+    return axios.post('https://angry-eel-veil.cyclic.app/plants', fd)
     .then((response)=> response.data)
     .then(response => dispatch(addPlants(response)))
     .catch((error)=>dispatch(plantsFailed(error))) 
@@ -276,7 +276,7 @@ export const postPlants = (image,name,price,category,stock) => (dispatch)=>{
 export const fetchPlants = () =>(dispatch)=>{
     dispatch(plantsLoading(true));
 
-    return axios.get('http://localhost:3001/plants') 
+    return axios.get('https://angry-eel-veil.cyclic.app/plants') 
         .then((response)=> response.data)
         .then(response => dispatch(addPlants(response)))
         .catch((error)=>dispatch(plantsFailed(error)))
@@ -304,7 +304,7 @@ export const postSubstrates = (image,name,price,category,stock) => (dispatch)=>{
     fd.append("category",category); 
     fd.append("stock",stock);
     console.log(image,name,price,category);
-    return axios.post('http://localhost:3001/substrates', fd)
+    return axios.post('https://angry-eel-veil.cyclic.app/substrates', fd)
     .then((response)=> response.data)
     .then(response => dispatch(addSubstrates(response)))
     .catch((error)=>dispatch(substratesFailed(error))) 
@@ -313,7 +313,7 @@ export const postSubstrates = (image,name,price,category,stock) => (dispatch)=>{
 export const fetchSubstrates = () =>(dispatch)=>{
     dispatch(substratesLoading(true));
 
-    return axios.get('http://localhost:3001/substrates') 
+    return axios.get('https://angry-eel-veil.cyclic.app/substrates') 
         .then((response)=> response.data)
         .then(response => dispatch(addSubstrates(response)))
         .catch((error)=>dispatch(substratesFailed(error)))
@@ -341,7 +341,7 @@ export const postFoods = (image,name,price,category,stock) => (dispatch)=>{
     fd.append("category",category); 
     fd.append("stock",stock);
     console.log(image,name,price,category);
-    return axios.post('http://localhost:3001/fishfoods', fd)
+    return axios.post('https://angry-eel-veil.cyclic.app/fishfoods', fd)
     .then((response)=> response.data)
     .then(response => dispatch(addFoods(response)))
     .catch((error)=>dispatch(foodsFailed(error))) 
@@ -351,7 +351,7 @@ export const postFoods = (image,name,price,category,stock) => (dispatch)=>{
 export const fetchFoods = () =>(dispatch)=>{
     dispatch(foodsLoading(true));
 
-    return axios.get('http://localhost:3001/fishfoods') 
+    return axios.get('https://angry-eel-veil.cyclic.app/fishfoods') 
         .then((response)=> response.data)
         .then(response => dispatch(addFoods(response)))
         .catch((error)=>dispatch(foodsFailed(error)))
@@ -379,7 +379,7 @@ export const postFilters = (image,name,price,category,stock) => (dispatch)=>{
     fd.append("category",category); 
     fd.append("stock",stock);
     console.log(image,name,price,category,stock);
-    return axios.post('http://localhost:3001/filters', fd)
+    return axios.post('https://angry-eel-veil.cyclic.app/filters', fd)
     .then((response)=> response.data)
     .then(response => dispatch(addFilters(response)))
     .catch((error)=>dispatch(filtersFailed(error))) 
@@ -388,7 +388,7 @@ export const postFilters = (image,name,price,category,stock) => (dispatch)=>{
 export const fetchFilters = () =>(dispatch)=>{
     dispatch(filtersLoading(true));
 
-    return axios.get('http://localhost:3001/filters') 
+    return axios.get('https://angry-eel-veil.cyclic.app/filters') 
         .then((response)=> response.data)
         .then(response => dispatch(addFilters(response)))
         .catch((error)=>dispatch(filtersFailed(error)))
@@ -410,7 +410,7 @@ export const addFilters = (filters) => ({
 //user get request
 export const getUser = () => (dispatch)=>{ 
     dispatch(userLoadingg(true))
-    return axios.get('http://localhost:3001/user')
+    return axios.get('https://angry-eel-veil.cyclic.app/user')
     .then((response)=> response.data)
     .then(response => dispatch(addUserr(response)))
     .catch((error)=>dispatch(userFailedd(error))) 
@@ -433,7 +433,7 @@ export const addUserr = (user) => ({
 //for order history
 export const postOrder = (obj) => (dispatch)=>{ 
     dispatch(userLoading(true))
-    return axios.put('http://localhost:3001/user/order', {
+    return axios.put('https://angry-eel-veil.cyclic.app/user/order', {
         email:obj.email,
         price:obj.price,
         count:obj.count, 
@@ -454,7 +454,7 @@ export const postOrder = (obj) => (dispatch)=>{
 //Post User Cart
 export const postCart = (email,product_id,product_name,count,category,img,price) => (dispatch)=>{ 
     dispatch(userLoading(true))
-    return axios.put('http://localhost:3001/user/cart', {email:email,product_id:product_id,product_name:product_name,count:count,category:category,img:img,price:price})
+    return axios.put('https://angry-eel-veil.cyclic.app/user/cart', {email:email,product_id:product_id,product_name:product_name,count:count,category:category,img:img,price:price})
     .then((response)=> response.data)
     .then(response => dispatch(addUser(response)))
     .catch((error)=>dispatch(userFailed(error))) 
@@ -462,7 +462,7 @@ export const postCart = (email,product_id,product_name,count,category,img,price)
 //user
 export const postUser = (email) => (dispatch)=>{ 
     dispatch(userLoading(true))
-    return axios.post('http://localhost:3001/user', {email:email})
+    return axios.post('https://angry-eel-veil.cyclic.app/user', {email:email})
     .then((response)=> response.data)
     .then(response => dispatch(addUser(response)))
     .catch((error)=>dispatch(userFailed(error))) 
@@ -506,7 +506,7 @@ export const addUser = (user) => ({
 //delete the cart products
 export const deleteCart = (email,name) => (dispatch)=>{ 
     dispatch(userLoading3(true))
-    return axios.put('http://localhost:3001/user/cart/delete', {email:email,name:name})
+    return axios.put('https://angry-eel-veil.cyclic.app/user/cart/delete', {email:email,name:name})
     .then((response)=> response.data)
     .then(response => dispatch(addUser3(response)))
     .catch((error)=>dispatch(userFailed3(error))) 
@@ -528,7 +528,7 @@ export const addUser3 = (user) => ({
 //post user Tickets
 export const postUserTickets = (email,date,members) => (dispatch)=>{ 
     dispatch(userLoading1(true))
-    return axios.put('http://localhost:3001/user/ticket', {email:email,date:date,members:members})
+    return axios.put('https://angry-eel-veil.cyclic.app/user/ticket', {email:email,date:date,members:members})
     .then((response)=> response.data)
     .then(response => dispatch(addUser1(response)))
     .catch((error)=>dispatch(userFailed1(error))) 
@@ -549,7 +549,7 @@ export const addUser1 = (user) => ({
 //Tickets
 export const postTickets = (date,available,userId) => (dispatch)=>{ 
     dispatch(ticketsLoading(true))
-    return axios.post('http://localhost:3001/ticket', {
+    return axios.post('https://angry-eel-veil.cyclic.app/ticket', {
         date:date,
         available:parseInt(available,10),
         user_id:userId
@@ -562,7 +562,7 @@ export const postTickets = (date,available,userId) => (dispatch)=>{
 export const getTickets = () => (dispatch)=>{ 
    // console.log("tickets ",new Date().toISOString().slice(0, 10))
     dispatch(ticketsLoading(true))
-    return axios.get('http://localhost:3001/ticket')
+    return axios.get('https://angry-eel-veil.cyclic.app/ticket')
     .then((response)=>response.data)
     .then(response => dispatch(addTickets(response))) 
     .catch((error)=>dispatch(ticketsFailed(error))) 

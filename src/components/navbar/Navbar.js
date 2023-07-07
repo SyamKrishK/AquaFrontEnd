@@ -33,7 +33,7 @@ function NavBar(props){
  
   let tem = [];
    useEffect(() => { 
-    axios.get('http://localhost:3001/user')
+    axios.get('https://angry-eel-veil.cyclic.app/user')
     .then((response)=>{
       tem = response.data.filter((user) => user.email === (currentUser.email+"")).map((cart)=>cart.cart); 
       //console.log("cart",tem[0].length); 

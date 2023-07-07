@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ad6acbb1.chunk.css",
+    "main.js": "/static/js/main.5b2b27d1.chunk.js",
+    "main.js.map": "/static/js/main.5b2b27d1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7a8b34f1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7a8b34f1.js.map",
+    "static/css/2.406a6693.chunk.css": "/static/css/2.406a6693.chunk.css",
+    "static/js/2.1598f2bc.chunk.js": "/static/js/2.1598f2bc.chunk.js",
+    "static/js/2.1598f2bc.chunk.js.map": "/static/js/2.1598f2bc.chunk.js.map",
+    "static/js/3.d42bd90b.chunk.js": "/static/js/3.d42bd90b.chunk.js",
+    "static/js/3.d42bd90b.chunk.js.map": "/static/js/3.d42bd90b.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.406a6693.chunk.css.map": "/static/css/2.406a6693.chunk.css.map",
+    "static/css/main.ad6acbb1.chunk.css.map": "/static/css/main.ad6acbb1.chunk.css.map",
+    "static/js/2.1598f2bc.chunk.js.LICENSE.txt": "/static/js/2.1598f2bc.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/static/media/whale_shark.f83818ac.gif",
+    "static/media/tickets.css": "/static/media/coral-reefs.b6fb0170.jpg",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.f691f37e.woff",
+    "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7a8b34f1.js",
+    "static/css/2.406a6693.chunk.css",
+    "static/js/2.1598f2bc.chunk.js",
+    "static/css/main.ad6acbb1.chunk.css",
+    "static/js/main.5b2b27d1.chunk.js"
+  ]
+}
