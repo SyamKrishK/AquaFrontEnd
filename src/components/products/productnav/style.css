@@ -1,0 +1,11 @@
+.shipping{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.shippingNav-item{ 
+    color: rgb(3, 3, 3) !important;
+}
+
+/* .dropdown-menu { display:table; width: 100%; text-align: center; left:50%; right:0; }  
+.dropdown-item { display: table-cell; }  */

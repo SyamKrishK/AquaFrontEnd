@@ -1,0 +1,17 @@
+.custom-modal-style { 
+    height: 500px; 
+    padding: 15px;  
+}
+.listTag > li{
+    margin-top: 7px;
+}
+.container-fluid{
+    background-image: url(./coral-reefs.jpg) !important;
+    height: 100vh;
+    min-height: 100%;
+    width: 100vw;
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+}
+.myorder{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

@@ -1,0 +1,21 @@
+.img-quick { 
+    overflow: hidden;
+  }
+.img-quick .img-q{
+    transform-origin: 65% 75%;
+    transition: transform 0.9s, filter .3s ease-out;
+}
+.img-quick:hover .img-q{
+    transform: scale(1.1);
+}
+.slick-prev:before {
+    font-size: 1.5rem;
+    color: #080808;
+}
+.slick-next:before{ 
+    font-size: 1.5rem;
+    color: #080808;
+}
+.newProduct{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px; 
+}
